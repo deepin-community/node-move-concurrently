@@ -1,0 +1,41 @@
+Source: node-move-concurrently
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-aproba <!nocheck>
+ , node-copy-concurrently <!nocheck>
+ , node-fs-write-stream-atomic <!nocheck>
+ , node-mkdirp <!nocheck>
+ , node-rimraf <!nocheck>
+ , node-run-queue <!nocheck>
+ , node-tacks <!nocheck>
+ , node-tap <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-move-concurrently
+Vcs-Git: https://salsa.debian.org/js-team/node-move-concurrently.git
+Homepage: https://www.npmjs.com/package/move-concurrently
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-move-concurrently
+Architecture: all
+Depends: ${misc:Depends}
+ , node-aproba
+ , node-copy-concurrently
+ , node-fs-write-stream-atomic
+ , node-mkdirp
+ , node-rimraf
+ , node-run-queue
+Description: Move files and directories concurrently
+ Promises of moves of files or directories with rename, falling back to
+ recursive rename/copy on EXDEV errors, with configurable concurrency and win32
+ junction support.
+ .
+ If you `move` across devices or on filesystems that don't support renaming
+ large directories.  That is, situations that result in `rename` returning
+ the `EXDEV` error, then `move` will fallback to copy + delete.
+ .
+ Node.js is an event-based server-side JavaScript engine.
