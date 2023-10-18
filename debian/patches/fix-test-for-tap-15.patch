@@ -1,0 +1,23 @@
+Description: fix test for tap 15
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-04-21
+
+--- a/test/integration.js
++++ b/test/integration.js
+@@ -55,7 +55,7 @@
+   fixture.remove(basedir)
+   fixture.create(basedir)
+   testDirContent = loadFromDir(testdir('test-dir'))
+-  t.done()
++  t.end()
+ })
+ 
+ test('move', function (t) {
+@@ -79,5 +79,5 @@
+ 
+ test('cleanup', function (t) {
+   fixture.remove(basedir)
+-  t.done()
++  t.end()
+ })

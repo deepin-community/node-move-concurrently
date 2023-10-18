@@ -1,3 +1,10 @@
+node-move-concurrently (1.0.1-5) unstable; urgency=medium
+
+  * Team upload
+  * Fix test for tap >= 15 (--no-cov) (Closes: #1009522)
+
+ -- Yadd <yadd@debian.org>  Thu, 21 Apr 2022 17:01:35 +0200
+
 node-move-concurrently (1.0.1-4) unstable; urgency=medium
 
   * Team upload
